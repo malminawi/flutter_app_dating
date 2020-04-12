@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "216092398232",
+    "firebase_url": "https://datingkiosic.firebaseio.com",
+    "project_id": "datingkiosic",
+    "storage_bucket": "datingkiosic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216092398232:android:4c8f718851893c702136ed",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app_dating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216092398232-qfspigeqv61oajopq0fndh25oqob4udl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu4CbBiJ2GLTZvS6L8FVTkzKYLuZFbSw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216092398232-qfspigeqv61oajopq0fndh25oqob4udl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
