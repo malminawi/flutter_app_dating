@@ -11,22 +11,11 @@ class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
-
-
-
 class _LoginPageState extends State<LoginPage> {
   String _email, _password;
-  // final _formkey = GlobalKey<FormState>();
-  //final _Scaffold = GlobalKey<FormState>();
-
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-
-
     Animation animation;
     AnimationController anmationController;
-    @override
-
-
   @override
   Widget build(BuildContext context) {
       SystemChrome.setPreferredOrientations([
@@ -34,7 +23,6 @@ class _LoginPageState extends State<LoginPage> {
         DeviceOrientation.landscapeLeft,
         DeviceOrientation.portraitUp,
         DeviceOrientation.portraitDown,     ]);
-
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
@@ -60,7 +48,6 @@ class _LoginPageState extends State<LoginPage> {
               },
               onSaved: (input) => _email = input,
               decoration: InputDecoration(labelText: 'Email'),
-
             ),
 
             TextFormField(
@@ -68,10 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                 if (input.length < 6) {
                   return 'Please enter you r 6 or over passport';
                 }
-
                 return null;
-
-                //return(input);
               },
               onSaved: (input) => _password = input,
               decoration: InputDecoration(labelText: 'Enter you password'),
@@ -89,7 +73,6 @@ class _LoginPageState extends State<LoginPage> {
                 child: Text('Submit'),
               ),
             ),
-
 
 Row(
 
@@ -114,12 +97,8 @@ child: Padding(
       padding: const EdgeInsets.only(bottom: 10, left: 0, right: 0),
 
       child: SizedBox(
-
-
         width: 10,
         height: 50,
-
-
       ),
 
     ),
@@ -138,96 +117,46 @@ child: Padding(
 
     ),
   ),
-
-
 ],
 
 
-
-/*
-  mainAxisAlignment: MainAxisAlignment.start,
-  children: <Widget>[
-        Text('New?', style: TextStyle(fontFamily: 'Montserrat'),),
-
-    SizedBox(width: 5.0,),
-    InkWell(
-      onTap: (){
-
-
-      },
-    )
-
-
-  ],
-  */
-
 ),
-
             Align(
               alignment: Alignment.bottomCenter,
-
               child: IconButton(
-
 disabledColor: Colors.lightBlueAccent,
                 icon: Icon(Icons.local_florist),
                 iconSize: 300,
                 onPressed: (){
-
                 },
-
               ),
-
-
-
-
             ),
-
-
-
-
-
           ],
         ),
       ),
       ),
     );
   }
-
   @override
-
-
   Future<void> signIn() async {
 //    final formState = _formkey.currentState;
-
     final isValid = _formkey.currentState.validate();
-
-
     if (!isValid) {
       print("error in form");
     }
     _formkey.currentState.save();
 
-
-
-//       */
-
       try{
           await  FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
-
         Navigator.push(context, MaterialPageRoute(builder: (context) => Home5()));
-
       }catch(e){
         print(e.message);
       }
     }
-
-
   void navigateTomyapp1(){
     Navigator.push(context, MaterialPageRoute(builder: (context) => Sign_Up(), fullscreenDialog: true));
 
   }
-
-
 
   }
 

@@ -3,15 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 class Notes extends StatefulWidget {
   @override
   NotesState createState() => NotesState();
 }
-
 class NotesState extends State<Notes> {
   TextEditingController _controller = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +16,6 @@ class NotesState extends State<Notes> {
         backgroundColor: Colors.pinkAccent,
         title: Text('ADD NOTES. ALL ADMINS WILL SEE IT ', style: TextStyle(
           fontWeight: FontWeight.bold, fontSize: 17, decorationStyle: TextDecorationStyle.dashed,
-
         ),),
       ),
       body: Padding(
@@ -51,7 +47,6 @@ class NotesState extends State<Notes> {
       ),
     );
   }
-
   // Must add dependency in pubspec.yaml !!!!!!!!
 
   final prefsKey = 'key';

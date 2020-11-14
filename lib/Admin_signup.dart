@@ -1,45 +1,33 @@
 
 
 import 'package:flutter/material.dart';
-
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_app_dating/dashboard.dart';
 import 'package:flutter_app_dating/ADminMainPage.dart';
-
-
-
-
 
 class MyHomePage6 extends StatefulWidget {
   @override
   _MyHomePage6State createState() => new _MyHomePage6State();
 }
-
 class _MyHomePage6State extends State<MyHomePage6> {
   String phoneNo;
   String smsCode;
   String verificationId;
-
   Future<void> verifyPhone() async {
     final PhoneCodeAutoRetrievalTimeout autoRetrieve = (String verId) {
       this.verificationId = verId;
     };
-
     final PhoneCodeSent smsCodeSent = (String verId, [int forceCodeResend]) {
       this.verificationId = verId;
       smsCodeDialog(context).then((value) {
         print('Signed in');
       });
     };
-
     final PhoneVerificationCompleted verifiedSuccess = (FirebaseUser user) {
       print('verified');
     };
-
     final PhoneVerificationFailed veriFailed = (AuthException exception) {
       print('${exception.message}');
     };
-
     await FirebaseAuth.instance.verifyPhoneNumber(
         phoneNumber: this.phoneNo,
         codeAutoRetrievalTimeout: autoRetrieve,
@@ -48,7 +36,6 @@ class _MyHomePage6State extends State<MyHomePage6> {
         verificationCompleted: verifiedSuccess,
         verificationFailed: veriFailed);
   }
-
   Future<bool> smsCodeDialog(BuildContext context) {
     return showDialog(
         context: context,

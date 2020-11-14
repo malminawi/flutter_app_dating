@@ -11,31 +11,18 @@ class mainScreeno extends StatefulWidget {
   @override
   _mainScreenoState createState() => _mainScreenoState();
 }
-
 class _mainScreenoState extends State<mainScreeno> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
-
-
-
-
-
-
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Row(
-
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-
-
-
                     Expanded(
                       child: MaterialButton(
                         //minWidth: double.infinity,
@@ -78,11 +65,8 @@ class _mainScreenoState extends State<mainScreeno> {
 
               ),
               Row(
-
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-
-
 
                     Expanded(
                       child: MaterialButton(
@@ -91,9 +75,6 @@ class _mainScreenoState extends State<mainScreeno> {
                         color: Colors.black,
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileFivePage()));
-
-
-
                         },
                         child: Image.asset('images/old.jpg'),
                       ),
@@ -122,11 +103,8 @@ class _mainScreenoState extends State<mainScreeno> {
 
               ),
               Row(
-
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-
-
 
                     Expanded(
                       child: MaterialButton(
@@ -161,12 +139,8 @@ class _mainScreenoState extends State<mainScreeno> {
 
               ),
               Row(
-
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-
-
-
                     Expanded(
                       child: MaterialButton(
                         //minWidth: double.infinity,

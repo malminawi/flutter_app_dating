@@ -4,38 +4,19 @@ import 'package:flutter_app_dating/FirstPageFiles/apperance.dart';
 import 'package:flutter_app_dating/PolicyPagee/POLICYPAGE.dart';
 import 'package:flutter_app_dating/SetUp/Login.dart';
 
-
-
 class Sign_Up extends StatefulWidget {
-
-
   @override
   _Sign_UpState createState() => _Sign_UpState();
 }
-
 class _Sign_UpState extends State<Sign_Up> {
-
-
-
-
-
   String _email, _password;
-
-
-
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-
-
-
   TextEditingController _textFieldController1 = TextEditingController();
   String _displayValue1 = "";
-
   _onSubmitted1( String value ) {
     setState(( ) => _displayValue1 = value);
   }
 String name;
-
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -46,8 +27,6 @@ String name;
         backgroundColor: Colors.greenAccent,
           title: Text('SIGN UP',),
           actions: <Widget>[
-
-
       IconButton(
       onPressed: ( ) {
         _HELP(context);
@@ -74,18 +53,9 @@ String name;
                 icon: Icon(Icons.face),
                 iconSize: 300,
                 onPressed: (){
-
                 },
-
               ),
-
-
-
-
             ),
-
-
-
 
             TextFormField(
               validator: (input) {
@@ -105,17 +75,12 @@ String name;
                 if (input.length < 6  ) {
                   return 'Password must be over 6 charecters';
                 }
-
                 return null;
-
-                //return(input);
-              },
+                },
               onSaved: (input) => _password = input,
               decoration: InputDecoration(labelText: 'Enter Password more than 6 cheracters'),
               obscureText: true,
             ),
-
-
 
             Padding(
               padding: const EdgeInsets.only(left: 70, right: 70, top: 15),
@@ -137,17 +102,11 @@ String name;
                               signIn();
                             },
                           ),
-
-
                           FlatButton(
                             child: Text('Go back '),
                             onPressed: () {
                               Navigator.pop(context);                            },
                           ),
-
-
-
-
                         ],
                       );
                     },
@@ -159,28 +118,9 @@ String name;
                 child: Text('Sign Up', style: TextStyle(fontSize: 25),),
               ),
             ),
-
-
-/*
-            Padding(
-              padding: const EdgeInsets.only(left: 70, right: 70, top: 18),
-              child: RaisedButton(
-
-                onPressed: () {
-           //  Navigator.push(context, MaterialPageRoute(builder: (context) => signIn));
-                  signIn();           },
-                shape: RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.pinkAccent, width: 4)
-                ),
-                child: Text('sign up', style: TextStyle(fontSize: 25),),
-              ),
-            ),
-*/
             Padding(
               padding: const EdgeInsets.only(left: 120, right: 130, top:30),
               child: RaisedButton(
-
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
                            },
