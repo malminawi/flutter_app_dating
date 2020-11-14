@@ -7,15 +7,11 @@ import 'package:flutter_app_dating/signup.dart';
 import 'package:flutter_app_dating/ADminMainPage.dart';
 class firstPage extends StatefulWidget {
 
-
   @override
   firstPageState createState() => firstPageState();
 }
 
 class firstPageState extends State<firstPage> {
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,15 +27,10 @@ class firstPageState extends State<firstPage> {
             },
             icon: Icon(Icons.info),
           )
-
         ],
       ),
       drawer: Drawer(
-
-
           child: ListView(
-
-
               padding: EdgeInsets.zero,
               children: <Widget>[
                 DrawerHeader(
@@ -59,7 +50,6 @@ class firstPageState extends State<firstPage> {
                         fullscreenDialog: true));
                   },
 
-
                 ),
                 ListTile(
 
@@ -73,22 +63,6 @@ class firstPageState extends State<firstPage> {
 
 
                 ),
-
-/*
-                ListTile(
-
-                  title: Text('welcome  Page '),
-
-                  onTap: ( ) {
-                    Navigator.push(context, MaterialPageRoute(
-                        builder: ( context ) => WelcomePage(),
-                        fullscreenDialog: true));
-                  },
-
-
-                ),
-*/
-
               ]
           )
       ),
@@ -167,10 +141,6 @@ class firstPageState extends State<firstPage> {
                     ]
 
                 ),
-
-
-
-
                 Row(
 
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -183,9 +153,6 @@ class firstPageState extends State<firstPage> {
                       decoration: TextDecoration.none,
 
                     ),),
-
-
-
                     Align(
                       alignment: Alignment.bottomCenter,
 
@@ -194,14 +161,9 @@ class firstPageState extends State<firstPage> {
                         padding: const EdgeInsets.only(bottom: 10, left: 0, right: 0),
 
                         child: SizedBox(
-
-
                           width: 10,
                           height: 50,
-
-
                         ),
-
                       ),
                     ),
 
@@ -218,22 +180,8 @@ class firstPageState extends State<firstPage> {
 
                       ),
                     ),
-
-
-
-
                   ],
-
-
-
-
                 ),
-
-
-
-
-
-
               ],
             ),
           )
@@ -249,20 +197,3 @@ class firstPageState extends State<firstPage> {
   }
 }
 
-
-
-
-/*
-
-
-class ImageAsset extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    AssetImage assetImage = AssetImage('imagess/computer.jpg');
-    Image image = Image(image: assetImage,);
-    return Container(child: image,);
-  }
-}
-
-
-*/

@@ -8,35 +8,10 @@ import 'package:flutter_app_dating/signup.dart';
 class OnBoarding extends StatefulWidget {
   @override
   _OnBoardingState createState() => _OnBoardingState();
-
-
-
 }
-
-/*
-
-class TextFieldValue extends StatefulWidget {
-  @override
-  _OnBoardingState createState() {
-    return new _OnBoardingState();
-  }
-}
-
-*/
-
 class _OnBoardingState extends State<OnBoarding> {
-
-
   List<PageModel> pages = List<PageModel>();
-/*
-  TextEditingController _textFieldController = TextEditingController();
-  String _displayValue = "";
 
-  _onSubmitted(String value) {
-    setState(() => _displayValue = value);
-  }
-
-*/
   void _addPages( ) {
     pages.add(PageModel('Welcome',
         ' PLEASE SCROLL TO THE RIGHT TO GET MORE INFO BOUT WHAT is THIS APP',
@@ -53,17 +28,12 @@ class _OnBoardingState extends State<OnBoarding> {
         'images/bg6.png'));
   }
 
-
-
-
   @override
   Widget build(BuildContext context) {
     _addPages();
 
 
     return Scaffold(
-
-
         body: Stack(
           children: <Widget>[
             PageView.builder(
@@ -84,19 +54,11 @@ class _OnBoardingState extends State<OnBoarding> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Transform.translate(
-
                           child: Icon( pages[ index ].icon,
-
-
                             size: 160, color: Colors.white,),
                           offset: Offset(0, -100),
 
-
                         ),
-
-
-
-
                         Text( pages[ index ].title
 
                           , style: TextStyle(color: Colors.white,
@@ -105,11 +67,7 @@ class _OnBoardingState extends State<OnBoarding> {
 
                           ) ,
                           textAlign: TextAlign.center,
-
-
                         ),
-
-
                         Padding(
                           padding: const EdgeInsets.only(left: 48, right: 48, top: 18),
                           child: Text(pages[ index].description,
@@ -129,8 +87,6 @@ class _OnBoardingState extends State<OnBoarding> {
               itemCount: pages.length,
             ),
 
-
-
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
@@ -138,14 +94,11 @@ class _OnBoardingState extends State<OnBoarding> {
                 child: SizedBox(
                   width: double.infinity,
                   height: 50,
-
                   child: RaisedButton(
                   color: Colors.red,
                     child: Text('GO BACK!'),
                     onPressed: () {
     Navigator.pop(context);
-
-
 
   },
                     shape: RoundedRectangleBorder(
