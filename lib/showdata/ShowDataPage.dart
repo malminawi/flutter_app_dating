@@ -583,3 +583,117 @@ class Profile extends StatelessWidget {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Flutter code sample for Card
+
+// This sample shows creation of a [Card] widget that shows album information
+// and two actions.
+
+/// This is the stateless widget that the main application instantiates.
+class MyStatelessWidget extends StatelessWidget {
+  MyStatelessWidget({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        color: Colors.pink,
+        elevation: 10,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              leading: Icon(Icons.album, size: 70),
+              title: Text('Heart Shaker', style: TextStyle(color: Colors.white)),
+              subtitle: Text('TWICE', style: TextStyle(color: Colors.white)),
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+//class SendToAdmin extends StatelessWidget {
+//
+//  @override
+//  Widget build(BuildContext context) {
+//    return Scaffold(
+//      appBar: AppBar(
+//        title: Text('info for '),
+//      ),
+//      body: SingleChildScrollView(
+//
+//          child: Container(
+//              height: 100,
+//              color: Colors.grey,
+//
+//              child: Column(
+//                mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                children: <Widget>[
+//
+//                  Row(
+//                    mainAxisAlignment: MainAxisAlignment.start,
+//                    children: <Widget>[
+//                      Text( 'Status :  '
+//
+//                        , style: TextStyle(color: Colors.white,
+//                            fontSize: 20,
+//                            fontWeight: FontWeight.bold
+//                        ) ,
+//                        textAlign: TextAlign.center,
+//                      ),
+//
+//
+//                    ],
+//                  ),
+//
+//
+//
+//                ],
+//              )
+//
+//          )
+//
+//
+//      ),
+//    );
+//  }
+//}
+
+
+
+
+
+
+
+
+

@@ -31,9 +31,6 @@ class Home5 extends StatefulWidget {
 class _Home5State extends State<Home5> {
 
   // Properties & Variables needed
-
-
-
   int currentTab = 0; // to keep track of active tab index
 
   final List<Widget> screens = [

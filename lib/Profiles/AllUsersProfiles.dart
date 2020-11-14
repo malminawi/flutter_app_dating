@@ -16,9 +16,6 @@ class _mainScreenState extends State<mainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-
-
-
       body: PageView.builder(
 
         itemCount: myPages.length,
